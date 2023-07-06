@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  .dockerconfigjson: eyJhdXRocyI6eyJrdWJlZGV2LmF6dXJlY3IuaW8iOnsidXNlcm5hbWUiOiJrdWJlZGV2IiwicGFzc3dvcmQiOiJma2Foc2hqc2RhaGpoc2FzamQiLCJlbWFpbCI6Im1hdXJpY2lvc2FudG9zcGVkcm9zb0BnbWFpbC5jb20iLCJhdXRoIjoiYTNWaVpXUmxkanBtYTJGb2MyaHFjMlJoYUdwb2MyRnphbVE9In19fQ==
+kind: Secret
+metadata:
+  name: acr-kubedev
+type: kubernetes.io/dockerconfigjson

@@ -1,0 +1,18 @@
+apiVersion: apps/v1     #versão do grupo de resource no kubernetes
+kind: ReplicaSet
+metadata:
+  name: meuprimeiroreplicaset
+spec:    # Especificação do replicaset
+  replicas: 10
+  selector:    # Seleciona os objetos que quero manipular com esse replicaset
+    matchLabels:
+      app: exemplo
+  template:    # Especificação do pod que eu vou utilizar para esse replicaset
+    metadata:
+      labels:
+        app: exemplo
+    spec:    # Espec do pod em si
+      containers:
+        - name: meucontainer
+          image: kubedevio/nginx-color:blue
+    

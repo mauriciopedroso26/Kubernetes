@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meuprimeirodeployment
+spec:    # Especificação do deployment
+  replicas: 10
+  selector:    # Seleciona os objetos que quero manipular com esse deployment
+    matchLabels:
+      app: exemplo
+  template:    # Especificação do pod que eu vou utilizar para esse deployment
+    metadata:
+      labels:
+        app: exemplo
+    spec:    # Espec do pod em si
+      containers:
+      - name: meucontainer
+        image: kubedevio/nginx-color:green
