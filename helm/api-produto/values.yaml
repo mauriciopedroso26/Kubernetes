@@ -1,0 +1,12 @@
+mongodb:
+  tag: 4.2.8
+  credentials:
+    userName: mongouser
+    userPassword: mongopwd
+  databaseName: admin
+  # existSecret: nome da secret
+api:
+  image: fabricioveronez/pedelogo-catalogo:1.0.0
+  serviceType: NodePort
+profile:
+  active: prd

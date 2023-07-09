@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  {{- if eq .Values.profile.active "dsv" }}
+  name: teste-dsv
+  {{- else if eq .Values.profile.active "hml" }}
+  name: teste-hml
+  {{- else }}
+  name: teste
+  {{- end }}
