@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: roleta-job
+spec:
+  backoffLimit: 20
+  parallelism: 2
+  ttlSecondsAfterFinished: 10
+  template:
+    spec:
+      containers:
+        - name: roleta-job
+          image: kubedevio/roleta
+          args:
+            - "-w"
+            - "5"
+            - "-c"
+            - "2"
+            - "-m"
+            - "5"
+      restartPolicy: Never
