@@ -9,5 +9,5 @@ api:
   image: fabricioveronez/pedelogo-catalogo:1.0.0
   serviceType: NodePort
 profile:
-  active: prd
+  active: dsv
 ## teste
