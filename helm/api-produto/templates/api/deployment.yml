@@ -10,6 +10,8 @@ spec:
     metadata:
       labels:
         app: {{ .Release.Name }}-api
+      annotations:
+        teste: testando
     spec:
       containers:
       - name: api
